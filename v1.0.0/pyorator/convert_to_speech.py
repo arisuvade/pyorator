@@ -1,8 +1,14 @@
 from gtts import gTTS
 
 
-language = "en"
-text = "Hello, humans! I will destroy humanity!"
+def convert_to_speech(text, language):
+    match language:
+        case "Japanese":
+            lang = "ja"
+        case "Korean":
+            lang = "ko"
+        case _:
+            lang = "en"
 
-speech = gTTS(text=text, lang=language, slow=False)
-speech.save("test1.mp3")
+    speech = gTTS(text=text, lang=lang, slow=False)
+    speech.save("test.mp3")

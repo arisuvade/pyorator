@@ -10,5 +10,8 @@ def convert_to_speech(text, language):
         case _:
             lang = "en"
 
-    speech = gTTS(text=text, lang=lang, slow=False)
-    speech.save("test.mp3")
+    try:
+        speech = gTTS(text=text, lang=lang, slow=False)
+        speech.save("test.mp3")
+    except AssertionError:
+        pass

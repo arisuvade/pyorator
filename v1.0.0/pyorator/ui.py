@@ -1,5 +1,6 @@
 import customtkinter as ctk
 
+from ui.title_label import TitleLabel
 from ui.text_entry import TextEntry
 from ui.language_options import LanguageOptions
 from ui.generate_speech_button import GenerateSpeechButton
@@ -15,6 +16,10 @@ class UI(ctk.CTk):
         self.wm_title("PyOrator")
         self.geometry("300x260")
         self.resizable(False, False)
+
+        # Title
+        self.title = TitleLabel(self)
+        self.title.place(relx=0.5, rely=0.05, anchor="center")
 
         # Text
         self.text_entry = TextEntry(self)

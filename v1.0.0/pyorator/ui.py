@@ -14,7 +14,7 @@ class UI(ctk.CTk):
 
         # Window
         self.wm_title("PyOrator")
-        self.geometry("300x260")
+        self.geometry("300x200")
         self.resizable(False, False)
 
         # Title
@@ -27,13 +27,13 @@ class UI(ctk.CTk):
 
         # Language
         self.language_options = LanguageOptions(self)
-        self.language_options.place(relx=0.5, rely=0.31, anchor="center")
+        self.language_options.place(relx=0.5, rely=0.59, anchor="center")
 
         # Generate speech
         self.generate_speech_button = GenerateSpeechButton(
             self, command=self.convert_to_speech
         )
-        self.generate_speech_button.place(relx=0.5, rely=0.55, anchor="center")
+        self.generate_speech_button.place(relx=0.5, rely=0.76, anchor="center")
 
         # Error
         self.error_label = ErrorLabel(self)

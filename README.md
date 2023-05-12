@@ -1,5 +1,4 @@
 # PyOrator
-
 Pyorator is a speech generator app in development for Linux. With Pyorator, you can generate speech from any text input, making it a useful tool for anyone who needs to create audio content.
 
 ## Installation

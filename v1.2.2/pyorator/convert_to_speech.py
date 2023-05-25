@@ -20,4 +20,4 @@ def convert_to_speech(error_label, text, file_name, language):
         else:
             raise AssertionError
     except AssertionError:
-        error_label.configure(text="Error: Text and file name can't be empty.")
+        error_label.configure(text="Error: Text and file name can't be empty")

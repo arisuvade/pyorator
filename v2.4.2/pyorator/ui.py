@@ -4,7 +4,6 @@ import os
 from ui.title_label import TitleLabel
 from ui.text_entry import TextEntry
 from ui.file_name_entry import FileNameEntry
-from ui.language_options import LanguageOptions
 from ui.generate_speech_button import GenerateSpeechButton
 from ui.play_button import PlayButton
 from ui.theme_switch import ThemeSwitch
@@ -33,10 +32,6 @@ class UI(ctk.CTk):
         self.file_name_entry = FileNameEntry(self)
         self.file_name_entry.place(relx=0.5, rely=0.32, anchor="center")
 
-        # Language
-        self.language_options = LanguageOptions(self)
-        self.language_options.place(relx=0.5, rely=0.45, anchor="center")
-
         # Generate speech
         self.generate_speech_button = GenerateSpeechButton(
             self, command=self.convert_to_speech
@@ -60,7 +55,6 @@ class UI(ctk.CTk):
             self.error_label,
             self.text_entry.get(),
             self.file_name_entry.get(),
-            self.language_options.language.get(),
         )
 
     def play_speech(self):

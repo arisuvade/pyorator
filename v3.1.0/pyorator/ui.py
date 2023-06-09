@@ -68,12 +68,13 @@ class UI(ctk.CTk):
         )
 
     def play_speech(self):
-        if os.system(f"paplay ~/GitHub/pyorator/test.mp3") != 0:
+        if os.system(f"paplay ~/GitHub/pyorator/{self.file_name_entry.get()}.mp3") != 0:
+            print(self.file_name_entry.get())
             self.error_label.configure(text="Error: There's no speech generated")
 
     def save_speech(self):
         self.destroy()
 
     def delete_speech(self):
-        if os.system(f"rm test.mp3") != 0:
+        if os.system(f"rm {self.file_name_entry.get()}.mp3") != 0:
             self.error_label.configure(text="Error: There's no speech generated")

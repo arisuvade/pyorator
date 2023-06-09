@@ -38,9 +38,11 @@ To use the PyOrator app, follow these steps:
     $ ./main.py
     ```
 
-3. Follow the prompts to customize the text contents and pick a language you want to use.
+3. Follow the prompts to customize the text contents and file name.
 
-4. Press "Generate Speech" to generate the speech and save it as a mp3 file.
+4. Press "Generate Speech" to generate the speech and "Play" to play it.
+
+5. Save it using the save button or delete it.
 
 ## License
 This project is licensed under the [MIT License](https://github.com/arisuvade/pyorator/blob/main/LICENSE).

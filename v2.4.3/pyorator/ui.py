@@ -58,4 +58,5 @@ class UI(ctk.CTk):
         )
 
     def play_speech(self):
-        os.system(f"paplay ~/GitHub/pyorator/test.mp3")
+        if os.system(f"paplay ~/GitHub/pyorator/test.mp3") != 0:
+            self.error_label.configure(text="Error: There's no speech generated")

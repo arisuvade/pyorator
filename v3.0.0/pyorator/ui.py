@@ -6,6 +6,8 @@ from ui.text_entry import TextEntry
 from ui.file_name_entry import FileNameEntry
 from ui.generate_speech_button import GenerateSpeechButton
 from ui.play_button import PlayButton
+from ui.save_button import SaveButton
+from ui.delete_button import DeleteButton
 from ui.theme_switch import ThemeSwitch
 from ui.error_label import ErrorLabel
 from pyorator.convert_to_speech import convert_to_speech
@@ -36,11 +38,19 @@ class UI(ctk.CTk):
         self.generate_speech_button = GenerateSpeechButton(
             self, command=self.convert_to_speech
         )
-        self.generate_speech_button.place(relx=0.5, rely=0.58, anchor="center")
+        self.generate_speech_button.place(relx=0.5, rely=0.45, anchor="center")
 
         # Play
         self.play_button = PlayButton(self, command=self.play_speech)
-        self.play_button.place(relx=0.5, rely=0.71, anchor="center")
+        self.play_button.place(relx=0.5, rely=0.58, anchor="center")
+
+        # Save
+        self.save_button = SaveButton(self, command=self.save_speech)
+        self.save_button.place(relx=0.3, rely=0.71, anchor="center")
+
+        # Delete
+        self.delete_button = DeleteButton(self, command=self.delete_speech)
+        self.delete_button.place(relx=0.7, rely=0.71, anchor="center")
 
         # Theme switch
         self.theme_switch = ThemeSwitch(self)
@@ -59,4 +69,11 @@ class UI(ctk.CTk):
 
     def play_speech(self):
         if os.system(f"paplay ~/GitHub/pyorator/test.mp3") != 0:
+            self.error_label.configure(text="Error: There's no speech generated")
+
+    def save_speech(self):
+        self.destroy()
+
+    def delete_speech(self):
+        if os.system(f"rm test.mp3") != 0:
             self.error_label.configure(text="Error: There's no speech generated")

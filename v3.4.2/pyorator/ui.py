@@ -87,3 +87,8 @@ class UI(ctk.CTk):
     def delete_speech(self):
         if os.system(f"rm {self.file_name_entry.get()}.mp3") != 0:
             self.error_label.configure(text="Error: There's no speech generated")
+
+        # Enable buttons
+        self.text_entry.configure(state="normal")
+        self.file_name_entry.configure(state="normal")
+        self.generate_speech_button.configure(state="normal")

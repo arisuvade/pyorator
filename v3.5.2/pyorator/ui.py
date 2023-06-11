@@ -92,3 +92,7 @@ class UI(ctk.CTk):
         self.text_entry.configure(state="normal")
         self.file_name_entry.configure(state="normal")
         self.generate_speech_button.configure(state="normal")
+
+        # Remove entries
+        self.text_entry.delete(0, "end")
+        self.file_name_entry.delete(0, "end")

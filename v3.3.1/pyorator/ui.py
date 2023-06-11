@@ -61,6 +61,11 @@ class UI(ctk.CTk):
         self.error_label.place(relx=0.5, rely=0.97, anchor="center")
 
     def convert_to_speech(self):
+        # Disable buttons
+        self.text_entry.configure(state="disabled")
+        self.file_name_entry.configure(state="disabled")
+        self.generate_speech_button.configure(state="disabled")
+
         convert_to_speech(
             self.error_label,
             self.text_entry.get(),

@@ -14,7 +14,11 @@ class TitleLabel(ctk.CTkLabel):
         self.after(5000, self.update_title)
 
     def update_title(self):
-        self.configure(text="Hover the mouse to end")
+        self.configure(text="Generate and play it")
+        self.master.after(5000, self.update_title_2)
+
+    def update_title_2(self):
+        self.configure(text="Then save or delete it")
         self.master.after(5000, self.reset_title)
 
     def reset_title(self):

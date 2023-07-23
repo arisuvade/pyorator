@@ -9,19 +9,13 @@ To use the PyOrator app, you'll need to install the tk, customtkinter, and gtts 
     - Debian: `sudo apt-get install python-tk`
     - Fedora: `sudo dnf install tkinter`
 
-2. Install the customtkinter package:
-    - Install the package using pip:
+2. Install customtkinter and gtts packages:
     ```bash
-    $ pip install customtkinter
+    $ cd pyorator-[VERSION]
+    $ pip install -r requirements.txt
     ```
 
-3. Install the gtts package:
-    - Install the package using pip:
-    ```bash
-    $ pip install gtts
-    ```
-
-4. Clone this repository:
+3. Clone this repository:
     ```bash
     $ git clone https://github.com/arisuvade/pyorator.git
     ```

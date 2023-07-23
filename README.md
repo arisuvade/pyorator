@@ -33,7 +33,7 @@ To use the PyOrator app, follow these steps:
 
 2. Run the script:
     ```bash
-    $ cd pyorator
+    $ cd pyorator-[VERSION]
     $ ./main.py
     ```
 
